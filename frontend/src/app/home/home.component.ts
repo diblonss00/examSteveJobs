@@ -34,6 +34,8 @@ export class HomeComponent implements OnInit {
       }
   ]
 
+  hidden = true
+
   constructor() { 
  
   }
@@ -42,5 +44,9 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  contact(){
+    this.hidden = false
+    
+  }
 
 }

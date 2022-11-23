@@ -1,8 +1,8 @@
-<div class="row justify-content-start">
-  <div class="col-sm-4">
+<div class="row">
+  <div class="col-sm-4" *ngIf="hidden == true">
     <nav class="navbar navbar-expand-lg bg-secondary">
       <div class="container">
-        <img class="circle-image">
+        <button class="button-image" (click)="contact()"></button>
         <button class="btn"><i class="bi bi-chat-left-text"></i></button>
         <button class="btn"><i class="bi bi-plus-circle"></i></button>
         <button class="btn"><i class="bi bi-three-dots-vertical"></i></button>
@@ -19,7 +19,7 @@
     </nav>
 
 
-    <div *ngFor="let chat of Chat ">
+    <div *ngFor="let chat of Chat">
       <div class="card text-bg-dark">
         <div class="card-body">
           <div class="row">
@@ -34,10 +34,18 @@
     </div>
   </div>
 
-  <div class="col-8 d-flex justify-content-center">
+  <div *ngIf="hidden == false">
+    <app-contact></app-contact>
+  </div>
+
+  <div class="col-8 d-flex justify-content-center" *ngIf="hidden == true">
     <div class="d-flex flex-column">
       <h1 class="justify-content-center d-flex">WhatsApp Web</h1>
       <h5>Invia e ricevi messaggi senza mantenere il telefono connesso a Internet.</h5>
     </div>
+    
+    
   </div>
+
 </div>
+
