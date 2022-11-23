@@ -1,0 +1,35 @@
+<div class="col-sm-4">
+  <nav class="navbar navbar-expand-lg bg-secondary">
+    <div class="container">
+      <img class="circle-image">
+      <button class="btn"><i class="bi bi-chat-left-text"></i></button>
+      <button class="btn"><i class="bi bi-plus-circle"></i></button>
+      <button class="btn"><i class="bi bi-three-dots-vertical"></i></button>
+    </div>
+  </nav>
+
+  <nav class="navbar bg-dark">
+    <div class="container-fluid">
+      <form class="d-flex w-100" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn"><i class="bi bi-search text-white"></i></button>
+      </form>
+    </div>
+  </nav>
+
+<div>
+  <div *ngFor="let chat of Chat ">
+    <div class="card text-bg-dark">
+      <div class="card-body">
+        <div class="row">
+          <img src={{chat.image}} style="width: 80px; height: 50px;">
+          <h5 class="card-title">{{chat.users}}</h5>
+        </div>
+        <p class="card-text ml-5">{{chat.text}}<p>
+      </div>
+  </div>
+</div>
+
+
+
+</div>
