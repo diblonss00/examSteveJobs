@@ -21,7 +21,17 @@ export class HomeComponent implements OnInit {
   users:"Lucio",
   text:"Ciao Salvo!",
   image:"https://cdn-icons-png.flaticon.com/128/119/119591.png"
-  }
+  },
+  {
+    users:"Bobo",
+    text:"Cammel!",
+    image:"https://cdn-icons-png.flaticon.com/128/119/119591.png"
+    },
+    {
+      users:"Tano",
+      text:"Ciaooo!",
+      image:"https://cdn-icons-png.flaticon.com/128/119/119591.png"
+      }
   ]
 
   constructor() { 

@@ -20,10 +20,6 @@ p{
  margin-top: revert;
 }
 
-.button {
-    transition-duration: 0.4s;
-  }
-
-.button:hover {
-    background-color: #cb1212; /* Green */
-  }
+.row{
+    margin-right: 0px;
+}
