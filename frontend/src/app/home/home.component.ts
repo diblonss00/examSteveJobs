@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -34,9 +35,9 @@ export class HomeComponent implements OnInit {
       }
   ]
 
-  hidden = true
+  
 
-  constructor() { 
+  constructor(private router: Router) { 
  
   }
   
@@ -45,8 +46,9 @@ export class HomeComponent implements OnInit {
   }
 
   contact(){
-    this.hidden = false
+    this.router.navigateByUrl('/contact')
     
   }
+  
 
 }
