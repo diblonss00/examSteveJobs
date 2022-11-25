@@ -1,11 +1,11 @@
 <div class="row">
   <div class="col-sm-4">
-    <nav class="navbar navbar-expand-lg bg-secondary">
+    <nav class="navbar navbar-expand-lg grey-home">
       <div class="container">
         <button class="button-image" (click)="contact()"></button>
-        <button class="btn"><i class="bi bi-chat-left-text"></i></button>
-        <button class="btn"><i class="bi bi-plus-circle"></i></button>
-        <button class="btn"><i class="bi bi-three-dots-vertical"></i></button>
+        <button class="btn"><i class="bi bi-chat-left text-white"  style="font-size: 1.5rem;"></i></button>
+        <button class="btn"><i class="bi bi-plus-circle text-white"  style="font-size: 1.5rem;"></i></button>
+        <button class="btn"><i class="bi bi-three-dots-vertical text-white" style="font-size: 1.5rem;"></i></button>
       </div>
     </nav>
 
@@ -19,15 +19,14 @@
     </nav>
 
 
-    <div *ngFor="let chat of Chat">
+    <div  type="button" *ngFor="let chat of Chat" [routerLink]="['/chats']">
       <div class="card text-bg-dark">
         <div class="card-body">
           <div class="row">
             <img src={{chat.image}} style="width: 80px; height: 50px;">
             <h5 class="card-title">{{chat.users}}</h5>
           </div>
-          <p class="card-text ml-5">{{chat.text}}
-          <p>
+          <p class="card-text ml-5">{{chat.text}}</p>
         </div>
       </div>
 
@@ -39,7 +38,7 @@
   
 
   <div class="col-8 d-flex justify-content-center">
-    <div class="d-flex flex-column">
+    <div class="d-flex flex-column  text-white">
       <h1 class="justify-content-center d-flex">WhatsApp Web</h1>
       <h5>Invia e ricevi messaggi senza mantenere il telefono connesso a Internet.</h5>
     </div>
